@@ -1,0 +1,63 @@
+@import "../../style/vars.scss";
+
+.team {
+  margin-bottom: 293px;
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
+  .team-title {
+    @extend %titleSection;
+    margin-bottom: 32px;
+  }
+  .team-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 96px;
+    @media (max-width: 1300px) {
+      flex-direction: column;
+    }
+    .team-text {
+      @extend %textStyle;
+      max-width: 829px;
+      @media (max-width: 1300px) {
+        margin-bottom: 30px;
+      }
+    }
+    .team-button {
+      max-width: 360px;
+      justify-content: center;
+      font-size: 22px;
+      @include btnStyle(
+        $buttonColor,
+        $accentColor,
+        url("../../assets/Icons/resume.svg")
+      );
+      &::after {
+        width: 52px;
+        height: 47px;
+        @media (max-width: 992px) {
+          width: 30px;
+        }
+        @media (max-width: 768px) {
+          width: 26px;
+        }
+      }
+      @media (max-width: 992px) {
+        font-size: 16px;
+        max-width: 260px;
+        padding: 5px 15px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .team-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    @media (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+}

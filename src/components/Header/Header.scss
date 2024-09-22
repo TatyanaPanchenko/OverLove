@@ -1,0 +1,66 @@
+@import "../../style/vars.scss";
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  .header-wrapper {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    .navigation {
+      text-transform: uppercase;
+      display: flex;
+      gap: 24px;
+
+      .burger-menu {
+        display: none;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        @media (max-width: 1110px) {
+          display: block;
+        }
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        @media (max-width: 1110px) {
+          display: none;
+        }
+
+        a {
+          color: $mainLiteColor;
+          text-decoration: none;
+          padding: 16px 24px;
+        }
+      }
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        a {
+          // padding: 13px 40px;
+          text-decoration: none;
+        }
+        &-login {
+          color: $mainLiteColor;
+        }
+        &-signup {
+          @include btnStyle(
+            $accentColor,
+            transparent,
+            url("../../assets/Icons/flashBorder.svg")
+          );
+          border: 2px solid $accentColor;
+        }
+        @media (max-width: 1110px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

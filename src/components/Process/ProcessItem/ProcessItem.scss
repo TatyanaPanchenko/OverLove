@@ -1,0 +1,45 @@
+@import "../../../style/vars.scss";
+
+.processItem-inner {
+  display: flex;
+  margin-bottom: 24px;
+  max-width: 32%;
+  @media (max-width: 1425px) {
+    max-width: 48%;
+  }
+  @media (max-width: 1110px) {
+    max-width: 100%;
+  }
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+  .processItem-icon {
+    margin-right: 30px;
+    img {
+      width: 116px;
+      height: 116px;
+      @media (max-width: 992px) {
+        width: 80px;
+      }
+      @media (max-width: 768px) {
+        width: 60px;
+      }
+    }
+  }
+  .processItem-about {
+    .processItem-tech {
+      font-size: 40px;
+      @media (max-width: 992px) {
+        font-size: 34px;
+      }
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    .processItem-description {
+      @extend %textStyle;
+      font-size: 12px;
+      max-width: 305px;
+    }
+  }
+}

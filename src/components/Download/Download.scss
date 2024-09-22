@@ -1,0 +1,43 @@
+@import "../../style/vars.scss";
+
+.download {
+  background-image: linear-gradient(
+      180deg,
+      rgba(40, 174, 180, 1) 0%,
+      rgba(40, 174, 180, 0) 100%
+    ),
+    url("../../assets/Download/bg.jpg");
+  background-size: cover;
+  .download-wrapper {
+    padding: 155px 0;
+    text-align: center;
+    .download-capture {
+      @extend %captionStyle;
+    }
+    .download-text {
+      margin: 0 auto;
+      font-size: 16px;
+      max-width: 610px;
+      margin-bottom: 32px;
+    }
+    .download-social {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      a {
+        display: block;
+        width: 35px;
+        height: 35px;
+      }
+      .download-behance {
+        background-image: url("../../assets/Download/behance.svg");
+      }
+      .download-drrrible {
+        background-image: url("../../assets/Download/dribbble.svg");
+      }
+      .download-instagram {
+        background-image: url("../../assets/Download/instagram.svg");
+      }
+    }
+  }
+}

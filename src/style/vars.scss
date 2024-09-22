@@ -1,0 +1,60 @@
+$mainLiteColor: #ffffff;
+$mainDarkColor: #373737;
+$buttonColor: #2c2c2c;
+$accentColor: #ffd703;
+$textAccentColor: #3fc2bb;
+$textColor: #707070;
+$placeholderColor: #cccccc;
+$linkFooterColor: #38b7af;
+$shadowTextColor: #cefffd;
+$shadowCaptionColor: #f4f4f4;
+$footerBg: #0b514d;
+
+%captionStyle {
+  font-size: 106px;
+  font-weight: 400;
+  @media (max-width: 992px) {
+    font-size: 60px;
+  }
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+}
+%titleSection {
+  font-size: 60px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: $mainDarkColor;
+  @media (max-width: 992px) {
+    font-size: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+%textStyle {
+  font-size: 16px;
+  color: $textColor;
+}
+@mixin btnStyle($color, $bgColor, $icon) {
+  background-color: $bgColor;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1000px;
+  padding: 12px 40px;
+  color: $color;
+  border: none;
+  cursor: pointer;
+  &::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    background-image: $icon;
+    margin-left: 8px;
+    background-repeat: no-repeat;
+  }
+}

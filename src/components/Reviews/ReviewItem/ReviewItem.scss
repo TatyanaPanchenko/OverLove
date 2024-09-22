@@ -1,0 +1,26 @@
+@import "../../../style/vars.scss";
+.reviewItem-inner {
+  .reviewItem-about {
+    display: flex;
+    margin-bottom: 24px;
+    .reviewItem-avatar {
+      width: 67px;
+      height: 67px;
+      margin-right: 26px;
+    }
+    .reviewItem-data {
+      .reviewItem-name {
+        font-size: 32px;
+      }
+      .reviewItem-job {
+        color: $textAccentColor;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  .reviewItem-text {
+    @extend %textStyle;
+    max-width: 100%;
+  }
+}

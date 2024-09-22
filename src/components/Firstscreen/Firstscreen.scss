@@ -1,0 +1,82 @@
+@import "../../style/vars.scss";
+
+.firstscreen {
+  padding-top: 250px;
+  position: relative;
+  background-image: url("../../assets/Firstscreen/firstscreenBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1514px;
+  max-width: 100%;
+  margin-bottom: 240px;
+  @media (max-width: 992px) {
+    padding-top: 170px;
+    height: auto;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+  }
+  .firstscreen-wrapper {
+    background-image: url("../../assets/Header/itemsBg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-bottom: 160px;
+    @media (max-width: 992px) {
+      margin-bottom: 100px;
+      background-size: contain;
+    }
+    .firstscreen-caption {
+      @extend %captionStyle;
+      max-width: 909px;
+    }
+    .firstscreen-subtitle {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 0;
+      max-width: 700px;
+      margin-bottom: 72px;
+      @media (max-width: 992px) {
+        font-size: 20px;
+      }
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+    .firstscreen-button {
+      @include btnStyle(
+        $buttonColor,
+        $accentColor,
+        url("../../assets/Icons/resume.svg")
+      );
+      font-size: 22px;
+      &::after {
+        width: 52px;
+        height: 47px;
+        @media (max-width: 992px) {
+          width: 30px;
+        }
+        @media (max-width: 768px) {
+          width: 26px;
+        }
+      }
+      @media (max-width: 992px) {
+        font-size: 16px;
+        max-width: 260px;
+        padding: 5px 30px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  .firstscren-title {
+    @extend %titleSection;
+    color: $shadowCaptionColor;
+    margin-bottom: 32px;
+  }
+  .firstscreen-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../style/vars.scss";
+
+.graphics {
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-bottom: 280px;
+  @media (max-width: 992px) {
+    margin-bottom: 100px;
+  }
+  &-container-images {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    .container {
+      .graphics-element {
+        background-image: url("../../assets/Graphics/shapes.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 545px;
+        height: 535px;
+        top: -110px;
+        right: -80px;
+        @media (max-width: 1790px) {
+          right: 20px;
+        }
+      }
+      .graphics-title {
+        @extend %titleSection;
+        margin-bottom: 18px;
+      }
+      .graphics-text {
+        @extend %textStyle;
+        margin-bottom: 60px;
+        max-width: 774px;
+      }
+    }
+    .graphics-img {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 10px;
+      img {
+        max-width: 344px;
+        border-radius: 20px;
+      }
+    }
+  }
+}
